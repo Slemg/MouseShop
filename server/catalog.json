@@ -1,0 +1,85 @@
+[
+    {
+        "id": "el1",
+        "name": "HyperX Pulsefire Core",
+        "img": "img/catalog/hyperx.jpg",
+        "price": 799 
+
+    },
+    {
+        "id": "el2",
+        "name": "A4Tech A90 Black",
+        "img": "img/catalog/a90_blazing_black.jpg",
+        "price": 2299
+
+    },
+    {
+        "id": "el3",
+        "name": "Razer Viper",
+        "img": "img/catalog/razor.jpg",
+        "price": 4599 
+
+    },
+    {
+        "id": "el4",
+        "name": "Trust YVI FX WL",
+        "img": "img/catalog/trust.jpg",
+        "price": 299 
+
+    },
+    {
+            "id": "el5",
+            "name": "Asus ROG Chakram",
+            "img": "img/catalog/asus_rog.jpg",
+            "price": 2599 
+    
+    },
+        {
+            "id": "el6",
+            "name": "Logitech G PRO Wireless",
+            "img": "img/catalog/g_pro.jpg",
+            "price": 1299
+    
+    },
+        {
+            "id": "el7",
+            "name": "Razer Naga Pro",
+            "img": "img/catalog/razor_naga.jpg",
+            "price": 3199 
+    
+    },
+        {
+            "id": "el8",
+            "name": "A4Tech Bloody V7 Black",
+            "img": "img/catalog/a4tech_bloody.jpg",
+            "price": 799 
+    
+    },
+        {
+            "id": "el9",
+            "name": "Red Square Model Z Black",
+            "img": "img/catalog/red_square.jpg",
+            "price": 359 
+    
+    },
+        {
+            "id": "el10",
+            "name": "HyperX Pulsefire Black",
+            "img": "img/catalog/hyperx_pulsefire.jpeg",
+            "price": 1599 
+    
+    },
+    {
+        "id": "el11",
+        "name": "ASUS TUF M5",
+        "img": "img/catalog/asus_tuf.jpg",
+        "price": 1799 
+    },
+    {
+    "id": "el12",
+    "name": "Lenovo Legion M200",
+    "img": "img/catalog/legion.jpg",
+    "price": 999 
+
+    }
+]

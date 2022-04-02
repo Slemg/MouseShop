@@ -1,0 +1,196 @@
+.shopping-container {
+    width: 100%;
+    height: 50vh;
+    position: fixed;
+    top: 25%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    padding: var(--spacing-large);
+    box-shadow: var(--linear-gradient);
+}
+.shopping-element__name {
+    padding: var(--spacing-medium);
+    font-weight: bold;
+    background-color: #fff;
+}
+.shopping-element__price {
+    padding: var(--spacing-medium);
+    color: var(--color-unaccent);
+    background-color: #fff;
+}
+.shopping__close {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top:40px;
+    right:40px;
+    background-image: url(shopping__img/close.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    cursor: pointer;
+}
+.title {
+    height: 60px;
+    border-bottom: 1px solid #E1E8EE;
+    padding: 20px 30px;
+    color: #5E6977;
+    font-size: 18px;
+    font-weight: 400;
+  }
+   
+  #item {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    justify-content: space-around;
+    border-top:  1px solid #E1E8EE;
+    border-bottom:  1px solid #E1E8EE;
+  }
+  .shopping-element__tr {
+    display: flex;
+    position: relative;
+    top: -4%;
+  }
+  .buttons {
+    position: relative;
+    padding-top: 30px;
+    margin-right: 60px;
+  }
+  .delete-btn,
+  .like-btn {
+    display: inline-block;
+    Cursor: pointer;
+  }
+  .delete-btn {
+    display: inline-block;
+    cursor: pointer;
+    width: 18px;
+    height: 17px;
+    background: url(shopping__img/delete-icn.svg) no-repeat center;
+    margin-right: 20px;
+}
+  
+   
+  #like-btn {
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    background: url(shopping__img/twitter-heart.png);
+    width: 60px;
+    height: 60px;
+    background-size: 2900%;
+    background-repeat: no-repeat;
+  }
+  .is-active {
+    animation-name: animate;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(28);
+    animation-fill-mode: forwards;
+  }
+   
+  @keyframes animate {
+    0%   { background-position: left;  }
+    50%  { background-position: right; }
+    100% { background-position: right; }
+  }
+  .shopping-element__img {
+    margin-right: 50px;
+    height: 120px;
+  }
+  .description {
+    padding-top: 10px;
+    margin-right: 60px;
+  }
+   
+  .description span {
+    display: block;
+    font-size: 14px;
+    color: #43484D;
+    font-weight: 400;
+  }
+   
+  .description span:first-child {
+    margin-bottom: 5px;
+  }
+  .description span:last-child {
+    font-weight: 300;
+    margin-top: 8px;
+    color: #86939E;
+  }  
+  .quantity {
+    padding-top: 20px;
+    margin-right: 60px;
+  }
+  .quantity input {
+    -webkit-appearance: none;
+    border: none;
+    text-align: center;
+    width: 32px;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+  }
+   
+  .minus-btn,.plus-btn    {
+    width: 30px;
+    height: 30px;
+    background-color: #E1E8EE;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  .minus-btn {
+    display: inline-block;
+    cursor: pointer;
+    width: 18px;
+    height: 17px;
+    background: url(shopping__img/minus.svg) no-repeat center;
+  }
+  .plus-btn {
+    display: inline-block;
+    cursor: pointer;
+    width: 18px;
+    height: 17px;
+    background: url(shopping__img/plus.svg) no-repeat center;
+    margin-bottom: 3px;
+  }
+   
+  button:focus,
+  input:focus {
+    outline:0;
+  }
+  .total-price {
+    text-align: center;
+    font-size: 16px;
+    color: #43484D;
+    font-weight: 300;
+  }
+  @media (max-width: 800px) {
+    .shopping-cart {
+      
+      height: auto;
+      overflow: hidden;
+    }
+    #item {
+      height: auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    /* .image img {
+     
+    } */
+    .image,
+    .quantity,
+    .description {
+      width: 100%;
+      text-align: center;
+      margin: 6px 0;
+    }
+    .buttons {
+      margin-right: 20px;
+    }
+  }
