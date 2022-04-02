@@ -45,7 +45,6 @@
     display: flex;
     align-items: center;
     background-color: #fff;
-    justify-content: space-around;
     border-top:  1px solid #E1E8EE;
     border-bottom:  1px solid #E1E8EE;
   }
