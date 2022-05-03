@@ -16,7 +16,7 @@ class Products {
                 element.innerHTML = this.labelAdd;
             }
             
-            headerPage.render(products.length)  
+            headerPage.render(products.length) 
             
            
         }

@@ -3,6 +3,7 @@
 class Header {
     handlerOpenShoppingPage() {
         shoppingPage.render();
+        
         // document.body.classList.add('dark-theme');
     }
     

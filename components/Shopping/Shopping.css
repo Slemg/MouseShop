@@ -1,5 +1,6 @@
 .shopping-container {
-    width: 100%;
+  
+  margin: 1.75rem auto;
     height: 50vh;
     position: fixed;
     top: 25%;
@@ -18,6 +19,9 @@
     padding: var(--spacing-medium);
     color: var(--color-unaccent);
     background-color: #fff;
+}
+.shopping-disappear {
+  display: none;
 }
 .shopping__close {
     position: absolute;
@@ -45,8 +49,9 @@
     display: flex;
     align-items: center;
     background-color: #fff;
-    border-top:  1px solid #E1E8EE;
-    border-bottom:  1px solid #E1E8EE;
+    border-top: 1px solid #E1E8EE;
+    border-bottom: 1px solid #E1E8EE;
+    justify-content: space-between;
   }
   .shopping-element__tr {
     display: flex;
@@ -72,8 +77,11 @@
     margin-right: 20px;
 }
   
-   
-  #like-btn {
+  #counter {
+  display: flex;
+  justify-content: center;
+}
+.like-btn-0,.like-btn-1,.like-btn-2,.like-btn-3 {
     position: absolute;
     top: 9px;
     left: 15px;
@@ -82,6 +90,9 @@
     height: 60px;
     background-size: 2900%;
     background-repeat: no-repeat;
+    display: inline-block;
+    Cursor: pointer;
+    
   }
   .is-active {
     animation-name: animate;
@@ -90,7 +101,6 @@
     animation-timing-function: steps(28);
     animation-fill-mode: forwards;
   }
-   
   @keyframes animate {
     0%   { background-position: left;  }
     50%  { background-position: right; }
@@ -192,4 +202,7 @@
     .buttons {
       margin-right: 20px;
     }
+  }
+  .nothing {
+    display: none;
   }
