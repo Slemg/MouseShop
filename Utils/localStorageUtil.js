@@ -1,6 +1,8 @@
 class LocalStorageUtil {
     constructor() {
         this.keyName = 'products';
+       
+    
     }
 
     GetProducts() {
@@ -21,12 +23,13 @@ class LocalStorageUtil {
         } else {
             products.splice(index, 1)
         }
-        if (products.length > 4) {
+        if (products.length > 3) {
             alert("Достигнуто максимальное значение товаров.Убираю последний из списка")
             products.splice(index, 1)
             location.reload()
             
         }
+       
         
         
         

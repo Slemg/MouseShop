@@ -1,11 +1,7 @@
 class Shopping {
-    // constructor() {
-    //     this.detector = 0;
-
-    // }
+   
     handleClear() {
         ROOT_SHOPPING.innerHTML = '';
-        pizdec == 0
         location.reload()
     }
 
@@ -18,6 +14,7 @@ class Shopping {
             }
         }
     }
+  
     handlerOpenLikeButss() {
         {
             var butter = document.querySelector('.like-btn-1');
@@ -58,20 +55,24 @@ class Shopping {
     handleSetLocationStorage(element, id) {
         ProductsPage.render();
         const { pushProduct, products } = localStorageUtil.putProducts(id);
+        
 
         if (pushProduct) {
             element.classList.add(this.classNameActive);
             element.innerHTML = this.labelRemove;
+            
+                
+            
         } else {
             element.classList.remove(this.classNameActive);
             element.innerHTML = this.labelAdd;
+            
         }
         headerPage.render(products.length)
     }
     render() {
         const productsStore = localStorageUtil.GetProducts();
         let htmlCatalog = '';
-        let pizdec = 0;
         let sumCatalog = 0;
         let zxc = 0
         let wordd = 's'
@@ -96,19 +97,25 @@ class Shopping {
                 </tr>
                 </div>
                 `;
+                
                 wordd += 's'
                 zxc += 1
-                pizdec += 1
                 sumCatalog += price;
-
+                
             }
-        });
+            
+                
+        })
+        
+       ;
+       
         const html = `
         <div class="item">
             <div class="shopping-container">
             <div class="shopping__close" onclick="shoppingPage.handleClear()"></div>
                 <table>
                     ${htmlCatalog}
+                    <p class="no-items-in-cart">no items in cart</td>
                 <div class="shopping-element__tr">
                     <p class="shopping-element__name">💰 Сумма:</td>
                     <p class="shopping-element__price">${sumCatalog.toLocaleString()} UAH</td>
@@ -117,7 +124,14 @@ class Shopping {
             </div>
             </div>
         `;
+        
         ROOT_SHOPPING.innerHTML = html;
+        if (zxc > 0) {
+            {
+                var jokeee = document.querySelector('.no-items-in-cart');
+                jokeee.classList.toggle('shopping-disappear');
+            };
+        }
     }
 }
 const shoppingPage = new Shopping();
