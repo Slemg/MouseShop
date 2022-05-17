@@ -112,6 +112,9 @@ class Shopping {
         const html = `
         <div class="item">
             <div class="shopping-container">
+            <div class="cart-header">
+            
+            </div>
             <div class="shopping__close" onclick="shoppingPage.handleClear()"></div>
                 <table>
                     ${htmlCatalog}

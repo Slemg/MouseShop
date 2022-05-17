@@ -23,7 +23,7 @@ class LocalStorageUtil {
         } else {
             products.splice(index, 1)
         }
-        if (products.length > 3) {
+        if (products.length > 2) {
             alert("Достигнуто максимальное значение товаров.Убираю последний из списка")
             products.splice(index, 1)
             location.reload()
