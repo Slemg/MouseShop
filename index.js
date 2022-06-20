@@ -1,6 +1,6 @@
 function render () {
     const productsStore = localStorageUtil.GetProducts();
-
+    shoppingPage.render();
     headerPage.render(productsStore.length);
     ProductsPage.render();    
 }

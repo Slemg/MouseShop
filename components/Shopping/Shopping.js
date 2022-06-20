@@ -1,8 +1,12 @@
 class Shopping {
    
     handleClear() {
-        ROOT_SHOPPING.innerHTML = '';
-        location.reload()
+        var test = document.querySelector('.big-shopping');
+        test.classList.add('test');
+        var sss = document.querySelector('.pocket');
+        sss.classList.remove('shopping-blackout');
+        var smooth = document.querySelector('.big-shopping');
+        smooth.classList.add('shopping-smooth-active');
     }
 
     handlerOpenLikeButs() {
@@ -38,12 +42,19 @@ class Shopping {
         function addClickListener(card) {
             {
                 card.classList.add('selected');
+                var fixx = document.querySelector('.products-element__btn');
+                fixx.classList.remove('products-element__btn_active');
             };
         }
-        var cards = document.querySelectorAll('.container-0');
+        var cards = document.querySelector('.shopping-container');
         for (var i = 0; i < cards.length; i++) {
             addClickListener(cards[i]);
+            
         }
+        // var cards1 = document.querySelector('.container-1');
+        // for (var i = 0; i < cards1.length; i++) {
+        //     addClickListener(cards1[i]);
+        // }
     }
     GetProducts() {
         const productsLocalStorage = localStorage.getItem(this.keyName);
@@ -110,22 +121,24 @@ class Shopping {
        ;
        
         const html = `
-        <div class="item">
+        
             <div class="shopping-container">
-            <div class="cart-header">
             
-            </div>
+            <div class="cart-header">
+              <p>Shopping cart</p>
+             </div>
             <div class="shopping__close" onclick="shoppingPage.handleClear()"></div>
                 <table>
                     ${htmlCatalog}
                     <p class="no-items-in-cart">no items in cart</td>
                 <div class="shopping-element__tr">
-                    <p class="shopping-element__name">💰 Сумма:</td>
-                    <p class="shopping-element__price">${sumCatalog.toLocaleString()} UAH</td>
+                    <p class="shopping-element__sumname">💰 Сумма:</td>
+                    <p class="shopping-element__sumprice">${sumCatalog.toLocaleString()} UAH</td>
                 </div>
                 </table>
             </div>
-            </div>
+            
+            
         `;
         
         ROOT_SHOPPING.innerHTML = html;

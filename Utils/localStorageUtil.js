@@ -20,10 +20,11 @@ class LocalStorageUtil {
         if (index == -1) {
             products.push(id);
             pushProduct = true;
-        } else {
+        }
+         else {
             products.splice(index, 1)
         }
-        if (products.length > 2) {
+        if (products.length > 3) {
             alert("Достигнуто максимальное значение товаров.Убираю последний из списка")
             products.splice(index, 1)
             location.reload()

@@ -15,7 +15,7 @@ class Products {
                 element.classList.remove(this.classNameActive);
                 element.innerHTML = this.labelAdd;
             }
-            
+            console.log(pushProduct)
             headerPage.render(products.length) 
             
            

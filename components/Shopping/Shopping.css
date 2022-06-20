@@ -1,21 +1,39 @@
-.shopping-container {
+.big-shopping {
+  transition: all 0.6s ease 0s;
   
-    margin: 1.75rem auto;
-    height: 50vh;
+  transform: translate(-50%, -50%);
     position: fixed;
     top: 25%;
     left:50%;
-    transform: translate(-50%, -50%);
+    
     margin: auto;
     padding: var(--spacing-large);
     box-shadow: var(--linear-gradient);
     border-radius: 0.3rem;
     
 }
+.big-shopping {
+  opacity: 1;
+}
 .shopping-element__name {
     padding: var(--spacing-medium);
     font-weight: bold;
     background-color: #fff;
+}
+.shopping-element__sumname { 
+  font-weight: bold;
+  background-color: #fff;
+  margin: 0;
+  border-right: 1px solid #dee2e6;
+  display: flex;
+  padding: var(--spacing-medium);
+  align-items: center;
+}
+.shopping-element__sumprice {
+  padding: var(--spacing-medium);
+  color: var(--color-unaccent);
+  background-color: #fff;
+  margin: 0;
 }
 .shopping-element__price {
     padding: var(--spacing-medium);
@@ -24,6 +42,15 @@
 }
 .shopping-disappear {
   display: none;
+}
+.shopping-blackout {
+  transition: opacity .15s linear;
+  opacity: 0.3;
+}
+.shopping-smooth-active {
+  transform: translate(-50%, -130%);
+  opacity: 0;
+  transition: all 0.6s ease 0s;
 }
 .shopping__close {
     position: absolute;
@@ -57,12 +84,10 @@
   }
   .shopping-element__tr {
     display: flex;
-    position: relative;
-    top: -4%;
+   
   }
   .buttons {
     position: relative;
-    padding-top: 30px;
     margin-right: 60px;
   }
   .delete-btn,
@@ -74,6 +99,7 @@
     display: inline-block;
     cursor: pointer;
     width: 18px;
+    margin-top: 14px;
     height: 17px;
     background: url(shopping__img/delete-icn.svg) no-repeat center;
     margin-right: 20px;
@@ -85,11 +111,11 @@
 }
 .like-btn-0,.like-btn-1,.like-btn-2,.like-btn-3 {
     position: absolute;
-    top: 9px;
+    bottom: -20px;
     left: 15px;
     background: url(shopping__img/twitter-heart.png);
     width: 60px;
-    height: 60px;
+    height: 67px;
     background-size: 2900%;
     background-repeat: no-repeat;
     display: inline-block;
@@ -117,14 +143,14 @@
     flex-shrink: 0;
     align-items: center;
     justify-content: space-between;
-    padding: 1.7rem 2rem;
+    
     background-color: white;
     border-bottom: 1px solid #dee2e6;
     border-top-left-radius: calc(0.3rem - 1px);
     border-top-right-radius: calc(0.3rem - 1px);
   }
   .description {
-    padding-top: 10px;
+    
     margin-right: 60px;
   }
    
@@ -180,7 +206,9 @@
     background: url(shopping__img/plus.svg) no-repeat center;
     margin-bottom: 3px;
   }
-   
+  .cart-header p {
+    margin-left:10px
+  }
   button:focus,
   input:focus {
     outline:0;

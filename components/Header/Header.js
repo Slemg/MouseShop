@@ -3,8 +3,11 @@
 class Header {
     handlerOpenShoppingPage() {
         shoppingPage.render();
+        var sss = document.querySelector('.pocket');
+        sss.classList.add('shopping-blackout');
+        var smooth = document.querySelector('.big-shopping');
+        smooth.classList.remove('shopping-smooth-active');
         
-        // document.body.classList.add('dark-theme');
     }
     
     render(count) {
